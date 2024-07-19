@@ -24,7 +24,7 @@ const App = () => {
           element={
             <>
               <Hero />
-              <MainContent />
+              <MainContent setplayState={setplayState} />
               <VideoPlayer playState={playState} setplayState={setplayState} />
             </>
           }
@@ -38,11 +38,12 @@ const App = () => {
   );
 };
 
-const MainContent = () => (
+const MainContent = ({ setplayState }) => (
   <div className="container">
     <Title subTitle="Our Program" title="What We Offer" />
     <Programs />
-    <About />
+    {/* Pass setplayState to About component */}
+    <About setplayState={setplayState} />
     <Title subTitle="Gallery" title="Campus Photos" />
     <Campus />
     <Title subTitle="Testimonials" title="What Student Says" />
@@ -54,7 +55,7 @@ const MainContent = () => (
 );
 
 const ServicesPage = () => (
-  <div className="container" style={{marginTop: '130px'}}>
+  <div className="container" style={{ marginTop: '130px' }}>
     <Title subTitle="Our Services" title="Explore Our Services" />
     <Services />
     <Footer />

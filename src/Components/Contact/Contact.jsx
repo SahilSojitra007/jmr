@@ -55,11 +55,11 @@ const Contact = () => {
       <div className="contact-col">
         <form onSubmit={onSubmit}>
             <label>Name</label>
-            <input type='text' name='name' placeholder='Enter Your Name' required />
+            <input type='text' name='name' placeholder='Enter Your Name' required autoComplete='off'/>
             <label>Phone Number</label>
-            <input type='tel' name='phone' placeholder='Enter Your Phone Number' required />
+            <input type='tel' name='phone' placeholder='Enter Your Phone Number' required autoComplete='off'/>
             <label>Message</label>
-            <textarea name='message' rows="6" placeholder='Enter Your Message Here' required ></textarea>
+            <textarea name='message' rows="6" placeholder='Enter Your Message Here' required autoComplete='off'></textarea>
             <button type='submit' className='btn dark-btn'>Submit Now <img src={White_Arrow} alt="" /></button>
         </form>
         <span>{result}</span>
